@@ -16,3 +16,13 @@ export const nuevoCliente = async (cliente) => {
         console.log(error)
     }
 }
+
+export const obtenerClientes = async () => {
+    try{
+        const resultado = await fetch(url);
+        const json = await resultado.json();
+        return json;
+    }catch(error){
+        console.log(error)
+    }
+}
