@@ -12,7 +12,7 @@ import { nuevoCliente } from './API.js';
         const email = document.querySelector('#email').value;
         const telefono = document.querySelector('#telefono').value;
         const empresa = document.querySelector('#empresa').value;
-        console.log(nombre)
+
         const cliente = {
             nombre,
             email,

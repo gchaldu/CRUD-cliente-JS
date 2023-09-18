@@ -5,11 +5,11 @@ export const nuevoCliente = async (cliente) => {
     try {
             await fetch(
                     url,
-                { 
-                    method: 'POST', 
-                    body: JSON.stringify(cliente),
-                    headers: {'Content-Type': 'application/json'} 
-                }
+                    { 
+                        method: 'POST', 
+                        body: JSON.stringify(cliente),
+                        headers: {'Content-Type': 'application/json'} 
+                    }
             );
             window.location.href = 'index.html';
     } catch (error) {
@@ -26,3 +26,18 @@ export const obtenerClientes = async () => {
         console.log(error)
     }
 }
+
+export const eliminarCliente = async (id) => {
+    try{
+
+        await fetch(
+                `${url}/${id}`,
+                {
+                    method: 'DELETE'
+                }
+
+        )
+    }catch(error){
+        console.log(error)
+    }
+} 
